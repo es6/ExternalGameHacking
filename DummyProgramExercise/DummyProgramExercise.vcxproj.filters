@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ExternalGameHacking.cpp">
+    <ClCompile Include="DummyProgram.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
