@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f7673ea8-aab0-47d3-a3d0-fd23e0ba85d7}</ProjectGuid>
-    <RootNamespace>DummyProgramExercise</RootNamespace>
+    <ProjectGuid>{27334c9e-6f91-4c60-8edc-f8de5c1cba76}</ProjectGuid>
+    <RootNamespace>HackProgramExercise</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>ExternalGameHacking</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,8 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DummyProgram.cpp" />
-    <ClCompile Include="HackProgram.cpp" />
+    <ClCompile Include="HackProgramExercise.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

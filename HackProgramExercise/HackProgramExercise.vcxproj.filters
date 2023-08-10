@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DummyProgram.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HackProgram.cpp">
+    <ClCompile Include="HackProgramExercise.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
