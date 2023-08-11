@@ -31,6 +31,21 @@ int main()
     }
 
     cout << "intRead = " << dec << intRead << endl;
+
+    // Reading a pointer exercise
+    uintptr_t ptr2intAdd = 0x0;
+    cout << "ptr2int Memory Address: 0x";
+    cin >> hex >> ptr2intAdd;
+    getchar();
+
+    uintptr_t ptr2intBuffer = 0;
+    BOOL readPointer = ReadProcessMemory(hProcess, (LPCVOID)ptr2intAdd, &ptr2intBuffer, sizeof(int) * 2, NULL);
+    cout << "ptr2intBuffer = " << hex << ptr2intBuffer << endl;
+
+    DWORD ptr2intFinalRead = 0;
+    BOOL readAddyValue = ReadProcessMemory(hProcess, (LPCVOID)ptr2intBuffer, &ptr2intFinalRead, sizeof(int) * 2, NULL);
+    cout << "ptr2intFinalRead = " << dec << ptr2intFinalRead << endl;
+
     cout << "Press ENTER to quit." << endl;
     system("pause > nul");
     return 0;
