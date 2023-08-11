@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HackProgramExercise.cpp">
+    <ClCompile Include="RPMExercise.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
