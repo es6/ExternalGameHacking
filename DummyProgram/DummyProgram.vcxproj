@@ -22,7 +22,7 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{f7673ea8-aab0-47d3-a3d0-fd23e0ba85d7}</ProjectGuid>
-    <RootNamespace>DummyProgramExercise</RootNamespace>
+    <RootNamespace>DummyProgram</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>ExternalGameHacking</ProjectName>
   </PropertyGroup>
