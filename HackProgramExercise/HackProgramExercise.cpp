@@ -25,7 +25,7 @@ int main()
     cin >> dec >> pid;
 
     int intRead = 0;
-    HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
+    HANDLE hProcess = OpenProcess(PROCESS_VM_READ, FALSE, pid);
     if (hProcess == NULL) {
         cout << "OpenProcess failed. GetLastError = " << dec << GetLastError() << endl;
         system("pause");
