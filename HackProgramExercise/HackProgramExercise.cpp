@@ -10,7 +10,6 @@ uintptr_t pointerChainFollowing(vector<uintptr_t> addressOffsets, HANDLE hProces
     for (int i = 1; i < addressOffsets.size(); i++) {
         BOOL derefAddy = ReadProcessMemory(hProcess, (LPCVOID)BASE, &buffer, sizeof(int) * 2, NULL);
         buffer += addressOffsets[i];
-        cout << "Buffer: " << hex << buffer << endl;
         BASE = buffer;
     }
     DWORD finalBuffer = 0;
@@ -70,6 +69,8 @@ int main()
     getchar();
 
     addressOffsets.push_back(ptr2ptr2Address);
+
+    // Push back 0 as offsets as we don't have offsets in this dummy program
     addressOffsets.push_back(0);
     addressOffsets.push_back(0);
     addressOffsets.push_back(0);
@@ -79,6 +80,12 @@ int main()
 
     // Ending stuff
     cout << "Press ENTER to quit." << endl;
+    BOOL closeHandle = CloseHandle(hProcess);
+    if (closeHandle == 0) {
+        cout << "CloseHandle failed. GetLastError = " << dec << GetLastError() << endl;
+        system("pause");
+        return EXIT_FAILURE;
+    }
     system("pause > nul");
     return 0;
 }
