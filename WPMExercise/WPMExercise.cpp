@@ -31,7 +31,36 @@ int main() {
 		return EXIT_FAILURE;
 	}
 	cout << "Overwritten successfully" << endl;
-	
+
+	// Overwriting varString
+	uintptr_t varStringAddress = 0x0;
+	cout << "Enter varString address: 0x";
+	cin >> hex >> varStringAddress;
+
+	string stringToWrite = "ThomasJoe";
+	// string largerStringToWrite = "DefaultStringOverwritten";
+
+	BOOL writeString = WriteProcessMemory(hProcess, (LPVOID)varStringAddress, &stringToWrite, sizeof(stringToWrite), NULL);
+	if (!writeString) {
+		cout << "WriteProcessMemory failed, GetLastError = " << GetLastError() << endl;
+		system("pause");
+		return EXIT_FAILURE;
+	}
+
+	// Overwriting arrChar
+	uintptr_t arrCharAddress = 0x0;
+	cout << "Enter arrChar address: 0x";
+	cin >> hex >> arrCharAddress;
+
+	char arrCharToWrite[128] = "We just overwrote arrChar with this text.";
+	BOOL writeArrChar = WriteProcessMemory(hProcess, (LPVOID)arrCharAddress, &arrCharToWrite, sizeof(arrCharToWrite), NULL);
+	if (!writeArrChar) { 
+		cout << "WriteProcessMemory failed, GetLastError = " << GetLastError() << endl;
+		system("pause");
+		return EXIT_FAILURE;
+	}
+
+	// Closing
 	cout << "Press ENTER to quit." << endl;
 	BOOL closeHandle = CloseHandle(hProcess);
 	if (closeHandle == 0) {
