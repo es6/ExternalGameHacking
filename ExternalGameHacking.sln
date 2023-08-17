@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WPMExercise", "WPMExercise\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wesnoth-External", "Wesnoth-External\Wesnoth-External.vcxproj", "{D329796F-74CE-4C08-91B8-D8B99D96E56E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wesnoth-Internal", "Wesnoth-Internal\Wesnoth-Internal.vcxproj", "{3D26D9D4-EBBD-4E10-A6D1-854CD982C377}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{D329796F-74CE-4C08-91B8-D8B99D96E56E}.Release|x64.Build.0 = Release|x64
 		{D329796F-74CE-4C08-91B8-D8B99D96E56E}.Release|x86.ActiveCfg = Release|Win32
 		{D329796F-74CE-4C08-91B8-D8B99D96E56E}.Release|x86.Build.0 = Release|Win32
+		{3D26D9D4-EBBD-4E10-A6D1-854CD982C377}.Debug|x64.ActiveCfg = Debug|x64
+		{3D26D9D4-EBBD-4E10-A6D1-854CD982C377}.Debug|x64.Build.0 = Debug|x64
+		{3D26D9D4-EBBD-4E10-A6D1-854CD982C377}.Debug|x86.ActiveCfg = Debug|Win32
+		{3D26D9D4-EBBD-4E10-A6D1-854CD982C377}.Debug|x86.Build.0 = Debug|Win32
+		{3D26D9D4-EBBD-4E10-A6D1-854CD982C377}.Release|x64.ActiveCfg = Release|x64
+		{3D26D9D4-EBBD-4E10-A6D1-854CD982C377}.Release|x64.Build.0 = Release|x64
+		{3D26D9D4-EBBD-4E10-A6D1-854CD982C377}.Release|x86.ActiveCfg = Release|Win32
+		{3D26D9D4-EBBD-4E10-A6D1-854CD982C377}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
